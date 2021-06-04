@@ -1,5 +1,6 @@
 # Restaurant-Assignment
 It's a recruitment assignment from ZS Solution Ltd for the position of Android Developer.
+They gave me a wireframe with documentation to implement it. It has a three views like as Login View, Menu Item View, Menu Details View. They gave me login and menu item api to implement it and fetch this api.
 
 ### Installation
 To install Flutter sdk on your machine. You can follow this link below.
