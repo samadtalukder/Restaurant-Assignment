@@ -1,9 +1,7 @@
 # Restaurant-Assignment
 It's a recruitment assignment from ZS Solution Ltd for the position of Android Developer.
 
-## Get Started
-
-### Step 1
+### Installation
 To install Flutter sdk on your machine. You can follow this link below.
 
 ```
@@ -11,7 +9,7 @@ https://flutter.dev/docs/get-started/install
 
 ```
 
-### Step 2
+### Usage
 Open your command promote. Copy this code below and paste the command promote. 
 
 ```
@@ -19,7 +17,6 @@ git clone https://github.com/samadtalukder/Restaurant-Assignment.git
 
 ```
 
-### Step 3
 You open this project via VSCode or any IDE or you can go to the project folder then open your command promote and copy this code below and paste the command promote: 
 
 ```
@@ -27,7 +24,6 @@ flutter pub get
 
 ```
 
-### Step 3
 Run the project using following command
 
 ```
