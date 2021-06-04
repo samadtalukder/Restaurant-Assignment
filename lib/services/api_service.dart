@@ -9,9 +9,10 @@ import 'package:restarurent_assignment/network/api_url.dart';
 
 class APIService {
   static var client = http.Client();
+  static ResponseLogin responseLogin = ResponseLogin();
 
-  static Future<ResponseLogin> fetchLogin(String email, String password, bool isTermsAccepted, String restaurant) async {
-
+  static Future<ResponseLogin> fetchLogin(String email, String password,
+      bool isTermsAccepted, String restaurant) async {
     var response = await client.post(
       APIUrl.urlLogin,
       headers: <String, String>{
@@ -30,9 +31,9 @@ class APIService {
     debugPrint("${response.statusCode}");
 
     if (response != null && response.statusCode == 200) {
-      var jsonString = response.body;
-
-      return responseLoginFromJson(jsonString);
+      var jsonString = jsonDecode(response.body);
+      responseLogin = ResponseLogin.fromJson(jsonString);
+      return responseLogin;
     } else {
       return null;
     }

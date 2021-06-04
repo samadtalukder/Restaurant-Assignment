@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restarurent_assignment/model/ResponseMenuItem.dart';
 import 'package:restarurent_assignment/network/api_url.dart';
+import 'package:restarurent_assignment/utils/color_util.dart';
 import 'package:restarurent_assignment/utils/text_util.dart';
 import 'package:restarurent_assignment/widget/custom_expansion_tile.dart'
     as custom;
@@ -25,8 +26,8 @@ class _MenuListItemsState extends State<MenuListItems> {
       child: Card(
         margin: EdgeInsets.zero,
         child: custom.ExpansionTile(
-          backgroundColor: Colors.white,
-          headerBackgroundColor: Color(0xfff2f4f6),
+          backgroundColor: ColorUtil.white,
+          headerBackgroundColor: ColorUtil.header_bg,
           title: TextUtil(
             text: widget.title,
             fontSize: 17,
@@ -64,6 +65,7 @@ class _MenuListItemsState extends State<MenuListItems> {
                     ),
                   ),
                   onTap: (){
+                    /* Click on menu items its navigate to MenuDetailsPage */
                     Get.to(
                       MenuDetailsPage(
                         title: item.title,
@@ -71,13 +73,6 @@ class _MenuListItemsState extends State<MenuListItems> {
                         price: item.price,
                         ingredientLists: item.ingredientLists,
                       ),
-                      /*arguments: [
-                        item.title,
-                        item.photo,
-                        item.ingredientLists,
-                        item.price
-
-                      ],*/
                     );
                   },
                 );

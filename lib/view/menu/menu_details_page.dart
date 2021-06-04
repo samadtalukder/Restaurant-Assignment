@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restarurent_assignment/network/api_url.dart';
-import 'package:restarurent_assignment/utils/resulation_manage_util.dart';
-import 'package:restarurent_assignment/utils/text_util.dart';
 import 'package:restarurent_assignment/utils/color_util.dart';
+import 'package:restarurent_assignment/utils/constants.dart';
 import 'package:restarurent_assignment/utils/network_image_util.dart';
+import 'package:restarurent_assignment/utils/text_util.dart';
 
 class MenuDetailsPage extends StatefulWidget {
   final String title, image, price, ingredientLists;
@@ -24,12 +24,11 @@ class _MenuDetailsPageState extends State<MenuDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
-
+        iconTheme: IconThemeData(color: ColorUtil.white),
         backgroundColor: ColorUtil.blue_800,
         elevation: 0,
         title: TextUtil(
-          text: "Menu Details",
+          text: Constants.menu_details,
           color: Colors.white,
           fontWeight: FontWeight.bold,
           fontSize: 18,
@@ -48,7 +47,11 @@ class _MenuDetailsPageState extends State<MenuDetailsPage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 20,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,18 +85,22 @@ class _MenuDetailsPageState extends State<MenuDetailsPage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 20,
+                ),
                 child: TextUtil(
-                  text: "Ingredients",
+                  text: Constants.ingredients,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
               ),
               Container(
                 padding: EdgeInsets.only(
-                  left: 20.0,
-                  right: 20.0,
-                  top: 10.0,
+                  left: 20,
+                  right: 20,
+                  top: 10,
                 ),
                 child: TextUtil(
                   text: widget.ingredientLists,

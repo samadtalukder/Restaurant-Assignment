@@ -9,4 +9,5 @@ class ColorUtil {
   static const grey_200 = Color(0xFFEEEEEE);
   static const grey = Color(0xFF9E9E9E);
   static const white = Color(0xFFFFFFFF);
+  static const header_bg = Color(0xFFF2F4F6);
 }

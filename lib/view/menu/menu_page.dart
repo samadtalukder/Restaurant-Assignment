@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restarurent_assignment/controller/menu_item_controller.dart';
-import 'package:restarurent_assignment/utils/text_util.dart';
 import 'package:restarurent_assignment/utils/color_util.dart';
+import 'package:restarurent_assignment/utils/constants.dart';
+import 'package:restarurent_assignment/utils/text_util.dart';
 
 import 'menu_list_items.dart';
 
 class MenuPage extends StatelessWidget {
-
   MenuPage({Key key}) : super(key: key) {
     Get.put(MenuController());
   }
@@ -18,7 +18,7 @@ class MenuPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorUtil.blue_800,
         title: TextUtil(
-          text: "Menu",
+          text: Constants.menu,
           fontSize: 22,
           fontWeight: FontWeight.w500,
           color: Colors.white,
@@ -27,7 +27,7 @@ class MenuPage extends StatelessWidget {
       body: Container(
         child: Obx(
           () {
-            MenuController menuItemController=Get.find();
+            MenuController menuItemController = Get.find();
 
             if (menuItemController.isLoading.value) {
               return Center(

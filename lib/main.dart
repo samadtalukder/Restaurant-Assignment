@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:restarurent_assignment/utils/color_util.dart';
+import 'package:restarurent_assignment/utils/constants.dart';
 import 'package:restarurent_assignment/view/login/login_page.dart';
+import 'package:restarurent_assignment/view/menu/menu_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -21,7 +23,7 @@ class RestaurantApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Restaurant Assignment',
+      title: Constants.title,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

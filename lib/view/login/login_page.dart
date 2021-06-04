@@ -37,9 +37,9 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20),
               child: TextUtil(
-                text: Constants.welcome,
+                text: Constants.title,
                 color: ColorUtil.white,
-                fontSize: 40,
+                fontSize: 30,
               ),
             ),
             SizedBox(height: 20),
@@ -153,7 +153,7 @@ class LoginPage extends StatelessWidget {
 
                             /* While you press login onTap then check your form Validation */
                             if (_formKey.currentState.validate()) {
-                              /* If your form validation is ok then can be send your data on request to server */
+                              /* If your form validation is Ok then your authentication data send to server */
                               loginController.loginRequest(
                                 _emailTextController.text.trim().toString(),
                                 _passwordTextController.text.trim().toString(),
