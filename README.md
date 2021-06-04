@@ -27,7 +27,7 @@ flutter pub get
 
 ```
 
-### Step 3
+### Step 4
 Run the project using following command
 
 ```
