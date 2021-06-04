@@ -16,6 +16,8 @@ class MenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
         backgroundColor: ColorUtil.blue_800,
         title: TextUtil(
           text: Constants.menu,
@@ -45,6 +47,27 @@ class MenuPage extends StatelessWidget {
               );
             }
           },
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 64,
+        color: ColorUtil.blue_900,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context,true);
+            },
+            child: TextUtil(
+              text: "Back",
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: ColorUtil.blue_900,
+            ),
+          ),
         ),
       ),
     );

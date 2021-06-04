@@ -113,6 +113,27 @@ class _MenuDetailsPageState extends State<MenuDetailsPage> {
           ),
         ],
       ),
+      bottomNavigationBar: Container(
+        height: 64,
+        color: ColorUtil.blue_900,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context,true);
+            },
+            child: TextUtil(
+              text: "Back",
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: ColorUtil.blue_900,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

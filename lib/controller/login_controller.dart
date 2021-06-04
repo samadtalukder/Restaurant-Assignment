@@ -55,8 +55,9 @@ class LoginController extends GetxController {
       margin: EdgeInsets.all(10.0),
     );
     /* While login is success navigate to MenuPage */
-    Get.offAll(
+    Get.off(MenuPage());
+    /*Get.offAll(
       MenuPage(),
-    );
+    );*/
   }
 }
